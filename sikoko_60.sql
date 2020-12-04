@@ -1648,3 +1648,18 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+
+-- Table structure for table `sikoko_absensi_rapat`
+--
+
+CREATE TABLE `sikoko_absensi_rapata` (
+  `id_rapat` varchar(8) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id_peserta` varchar(18) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `waktu_kedatangan` datetime DEFAULT NULL,
+  `is_wajib` enum('0','1') COLLATE utf8mb4_unicode_ci NOT NULL,
+  `presentase_presensi` int(3) DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
